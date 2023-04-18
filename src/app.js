@@ -12,14 +12,16 @@ const app = express();
 // Implement CORS
 app.use(cors());
 
+app.options("*", cors());
+
 // Middlewares
 app.use(helmet());
 
 app.use(morgan("dev"));
 app.use(express.json());
 
-// Serve public
-app.use(express.static(path.join(__dirname, "..", "public")));
+// // Serve public
+// app.use(express.static(path.join(__dirname, "..", "public")));
 
 const checkLoggedIn = (req, res, next) => {
   const isLoggedIn = true;
