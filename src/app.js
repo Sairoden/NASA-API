@@ -20,8 +20,8 @@ app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
 
-// // Serve public
-// app.use(express.static(path.join(__dirname, "..", "public")));
+// Serve public
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 const checkLoggedIn = (req, res, next) => {
   const isLoggedIn = true;
