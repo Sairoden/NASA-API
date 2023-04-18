@@ -1,0 +1,33 @@
+{
+  "name": "nasa-backend",
+  "version": "1.0.0",
+  "description": "Backend for NASA Project",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest --watch",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "cluster": "pm2 start src/server.js -i max"
+  },
+  "author": "Sairoden",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.21",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.3.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "pm2": "^5.3.0"
+  }
+}
